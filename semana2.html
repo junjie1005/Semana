@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica Flexbox</title>
+  <style>
+    .contenedor {
+      display: flex;
+
+      /* Cambia estas propiedades para experimentar */
+      flex-direction: row; /* row | column */
+      justify-content: space-around; /* flex-start | center | space-between */
+      align-items: center; /* flex-start | center | stretch */
+      flex-wrap: wrap; /* nowrap | wrap */
+
+      height: 300px;
+      border: 2px solid black;
+    }
+
+    .item {
+      background-color: lightblue;
+      padding: 20px;
+      margin: 10px;
+      border: 1px solid blue;
+      width: 80px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+
+</body>
+</html>
