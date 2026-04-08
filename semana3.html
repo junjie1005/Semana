@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+
+  <style>
+    /* 1. Grid container */
+    .container {
+      display: grid;
+
+      /* 2. 3 columnas y 3 filas */
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-rows: 100px 200px 100px;
+
+      /* 4. Espacio */
+      gap: 10px;
+    }
+
+    /* Estilos básicos */
+    .container > div {
+      background: teal;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 3. Distribución */
+    .header {
+      grid-column: 1 / 4;
+    }
+
+    .sidebar {
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+    }
+
+    .main {
+      grid-column: 2 / 4;
+      grid-row: 2 / 4;
+    }
+
+    .footer {
+      grid-column: 1 / 4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>
