@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Online</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    margin:0;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.catalogo{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    position:relative;
+    padding-bottom:20px;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    transition:transform .4s ease;
+}
+
+.card:hover img{
+    transform:scale(1.1) rotate(2deg);
+}
+
+.estado{
+    position:absolute;
+    top:10px;
+    left:10px;
+    color:white;
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.disponible .estado{
+    background:green;
+}
+
+.oferta .estado{
+    background:orange;
+}
+
+.agotado .estado{
+    background:gray;
+}
+
+.card h2{
+    margin:15px 0 10px;
+}
+
+.card p{
+    padding:0 15px;
+    color:#555;
+}
+
+button{
+    margin-top:10px;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    background:#111;
+    color:white;
+    cursor:pointer;
+    transition:background .3s ease, transform .2s ease;
+}
+
+button:hover{
+    background:#0066ff;
+    transform:translateY(-3px);
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+button:disabled{
+    background:gray;
+    cursor:not-allowed;
+}
+
+.agotado{
+    opacity:.6;
+}
+
+@media (prefers-reduced-motion: reduce){
+    *{
+        transition:none !important;
+        animation:none !important;
+        transform:none !important;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<h1>Catálogo de Productos</h1>
+
+<div class="catalogo">
+
+    <div class="card disponible">
+        <span class="estado">Disponible</span>
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h2>Audífonos Gamer</h2>
+        <p>Sonido envolvente y micrófono integrado.</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="card oferta">
+        <span class="estado">Oferta</span>
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h2>Mouse Inalámbrico</h2>
+        <p>Sensor de alta precisión y batería duradera.</p>
+        <button>Ver Oferta</button>
+    </div>
+
+    <div class="card agotado">
+        <span class="estado">Agotado</span>
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h2>Teclado Mecánico</h2>
+        <p>Switches rápidos y diseño compacto.</p>
+        <button disabled>No Disponible</button>
+    </div>
+
+    <div class="card disponible">
+        <span class="estado">Disponible</span>
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h2>Monitor 144Hz</h2>
+        <p>Pantalla fluida ideal para gaming competitivo.</p>
+        <button>Comprar</button>
+    </div>
+
+</div>
+
+</body>
+</html>
