@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal Corporativo Universal</title>
+
+<style>
+
+/* ==========================
+   FALLBACK DE FUENTE
+========================== */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    /* Fallback 1 */
+    background:#004080;
+
+    /* Navegadores antiguos */
+    background:-webkit-linear-gradient(left,#004080,#0073e6);
+
+    /* Navegadores modernos */
+    background:linear-gradient(to right,#004080,#0073e6);
+
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* ==========================
+   NAVEGACIÓN
+========================== */
+
+nav{
+    background:#002b55;
+}
+
+nav ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav li{
+    margin:0;
+}
+
+nav a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+}
+
+nav a:hover{
+    background:#0059b3;
+}
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+/* ==========================
+   FALLBACK 2
+   FLEXBOX
+========================== */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    flex:1 1 300px;
+}
+
+/* ==========================
+   FEATURE DETECTION
+========================== */
+
+@supports(display:grid){
+
+    .cards{
+        display:grid;
+        grid-template-columns:
+        repeat(auto-fit,minmax(300px,1fr));
+    }
+
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+
+    /* prefijos */
+
+    -webkit-box-shadow:0 3px 10px rgba(0,0,0,.15);
+    -moz-box-shadow:0 3px 10px rgba(0,0,0,.15);
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* ==========================
+   BOTÓN
+========================== */
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 20px;
+    background:#0073e6;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#005bb5;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    margin-top:40px;
+    background:#002b55;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ==========================
+   PROGRESSIVE ENHANCEMENT
+========================== */
+
+@supports(animation-name:fade){
+
+    .card{
+        animation:fade .8s ease;
+    }
+
+    @keyframes fade{
+        from{
+            opacity:0;
+            transform:translateY(20px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Portal Corporativo Universal</h1>
+    <p>Acceso garantizado para todos los usuarios y navegadores</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h2>Servicios Empresariales</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Consultoría</h3>
+            <p>
+                Soluciones estratégicas para empresas de
+                cualquier tamaño.
+            </p>
+            <a href="#" class="btn">Más información</a>
+        </div>
+
+        <div class="card">
+            <h3>Transformación Digital</h3>
+            <p>
+                Modernización tecnológica con compatibilidad
+                multiplataforma.
+            </p>
+            <a href="#" class="btn">Más información</a>
+        </div>
+
+        <div class="card">
+            <h3>Soporte Corporativo</h3>
+            <p>
+                Atención especializada para clientes
+                empresariales.
+            </p>
+            <a href="#" class="btn">Más información</a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>Portal Corporativo Universal © 2026</p>
+    <p>Compatible con Chrome, Firefox y Safari</p>
+</footer>
+
+<script>
+
+/* ==========================
+   POLYFILL
+   Element.closest()
+========================== */
+
+if (!Element.prototype.closest) {
+
+    Element.prototype.closest = function(selector) {
+
+        let element = this;
+
+        while (element) {
+
+            if (element.matches(selector)) {
+                return element;
+            }
+
+            element = element.parentElement;
+        }
+
+        return null;
+    };
+}
+
+/* Ejemplo funcional */
+
+document.addEventListener("click", function(e){
+
+    const card = e.target.closest(".card");
+
+    if(card){
+        console.log("Tarjeta seleccionada");
+    }
+
+});
+
+</script>
+
+</body>
+</html>
