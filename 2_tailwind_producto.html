@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarjeta de Producto - Tailwind CSS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+
+    <!-- TARJETA 1 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <div class="relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Zapatilla"
+             class="w-full h-56 object-cover transition duration-500 hover:scale-110">
+        <span class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+          -20%
+        </span>
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-semibold text-gray-800">Zapatilla Urban Runner</h3>
+        <p class="text-sm text-gray-500 mt-1">Comodidad y estilo para el día a día</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-xl font-bold text-gray-900">S/ 189.90</span>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition hover:bg-indigo-700">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <div class="relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Reloj"
+             class="w-full h-56 object-cover transition duration-500 hover:scale-110">
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-semibold text-gray-800">Reloj Minimal Steel</h3>
+        <p class="text-sm text-gray-500 mt-1">Diseño elegante y resistente al agua</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-xl font-bold text-gray-900">S/ 349.00</span>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition hover:bg-indigo-700">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="bg-white rounded-2xl shadow-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <div class="relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Auriculares"
+             class="w-full h-56 object-cover transition duration-500 hover:scale-110">
+        <span class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+          Nuevo
+        </span>
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-semibold text-gray-800">Auriculares SoundMax</h3>
+        <p class="text-sm text-gray-500 mt-1">Cancelación de ruido y batería de 30h</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-xl font-bold text-gray-900">S/ 259.90</span>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition hover:bg-indigo-700">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

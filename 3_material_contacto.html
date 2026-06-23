@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Contacto - Material Design</title>
+
+<!-- Material Icons + Roboto (tipografía oficial de Material Design) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+<!-- Materialize CSS (implementación de Material Design) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+  body { font-family: 'Roboto', sans-serif; background-color: #f5f5f5; }
+  .form-card { max-width: 500px; margin: 60px auto; }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card form-card">
+      <div class="card-content">
+
+        <span class="card-title indigo-text text-darken-2">
+          <i class="material-icons left">mail</i>Contáctanos
+        </span>
+        <p class="grey-text">Completa el formulario y te responderemos pronto</p>
+
+        <form class="col s12" action="#">
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person</i>
+              <input id="nombre" type="text" class="validate">
+              <label for="nombre">Nombre completo</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate">
+              <label for="email">Correo electrónico</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">subject</i>
+              <input id="asunto" type="text" class="validate">
+              <label for="asunto">Asunto</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">message</i>
+              <textarea id="mensaje" class="materialize-textarea"></textarea>
+              <label for="mensaje">Mensaje</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span>Acepto la política de privacidad</span>
+            </label>
+          </div>
+
+          <button class="btn waves-effect waves-light indigo darken-2" type="submit">
+            Enviar mensaje
+            <i class="material-icons right">send</i>
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('textarea');
+      M.textareaAutoResize(elems);
+    });
+  </script>
+
+</body>
+</html>
