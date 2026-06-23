@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaTech - Soluciones Digitales</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Pequeños ajustes personalizados, sin sobrescribir demasiado Bootstrap (buena práctica) */
+    .hero-section {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== -->
+  <!-- 1) NAVBAR RESPONSIVO -->
+  <!-- ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <span class="text-primary">Nexa</span>Tech
+      </a>
+
+      <!-- Botón hamburguesa para móvil -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú colapsable (versión móvil) -->
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-primary btn-sm" href="#contacto">Cotizar proyecto</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===================== -->
+  <!-- 2) HERO SECTION -->
+  <!-- ===================== -->
+  <header id="inicio" class="hero-section text-white text-center py-5">
+    <div class="container py-5">
+
+      <!-- Título principal -->
+      <h1 class="display-4 fw-bold mb-3">
+        Transformamos ideas en software real
+      </h1>
+
+      <p class="lead col-lg-8 mx-auto mb-4">
+        Somos una startup tecnológica especializada en desarrollo web, móvil y
+        consultoría TI para empresas que quieren escalar rápido.
+      </p>
+
+      <!-- Botón CTA -->
+      <a href="#contacto" class="btn btn-light btn-lg fw-semibold px-4">
+        Solicitar Demo Gratuita
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ===================== -->
+  <!-- 3) SECCIÓN DE 3 TARJETAS -->
+  <!-- ===================== -->
+  <section id="servicios" class="container my-5 py-4">
+
+    <h2 class="text-center fw-bold mb-2">Nuestros Servicios</h2>
+    <p class="text-center text-muted mb-5">
+      Soluciones pensadas para acelerar el crecimiento de tu negocio
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Tarjeta 1: Desarrollo Web -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="card-body">
+            <div class="card-icon mb-3">💻</div>
+            <h5 class="card-title fw-semibold">Desarrollo Web</h5>
+            <p class="card-text text-muted">
+              Sitios y aplicaciones web responsivas, rápidas y optimizadas para todo tipo de dispositivo.
+            </p>
+            <a href="#contacto" class="btn btn-outline-primary mt-2">Más información</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Apps Móviles -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="card-body">
+            <div class="card-icon mb-3">📱</div>
+            <h5 class="card-title fw-semibold">Apps Móviles</h5>
+            <p class="card-text text-muted">
+              Desarrollo de aplicaciones nativas e híbridas para Android e iOS.
+            </p>
+            <a href="#contacto" class="btn btn-outline-primary mt-2">Más información</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Consultoría TI -->
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+          <div class="card-body">
+            <div class="card-icon mb-3">🚀</div>
+            <h5 class="card-title fw-semibold">Consultoría TI</h5>
+            <p class="card-text text-muted">
+              Asesoría técnica para escalar tu infraestructura y procesos de desarrollo.
+            </p>
+            <a href="#contacto" class="btn btn-outline-primary mt-2">Más información</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== -->
+  <!-- 4) FOOTER -->
+  <!-- ===================== -->
+  <footer id="contacto" class="bg-dark text-light pt-5 pb-3 mt-4">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Columna 1: Sobre la empresa -->
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold text-primary">NexaTech</h5>
+          <p class="text-muted small">
+            Construyendo el futuro digital de tu empresa, un proyecto a la vez.
+          </p>
+        </div>
+
+        <!-- Columna 2: Información de contacto -->
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold mb-3">Contacto</h6>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2">📍 Av. Tecnológica 123, Arequipa, Perú</li>
+            <li class="mb-2">📧 contacto@nexatech.com</li>
+            <li class="mb-2">📞 +51 987 654 321</li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Redes sociales -->
+        <div class="col-12 col-md-4">
+          <h6 class="fw-semibold mb-3">Síguenos</h6>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-light fs-5">Facebook</a>
+            <a href="#" class="text-light fs-5">LinkedIn</a>
+            <a href="#" class="text-light fs-5">Instagram</a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary mt-4">
+
+      <p class="text-center text-muted small mb-0">
+        &copy; 2026 NexaTech. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (necesario para el menú hamburguesa) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
