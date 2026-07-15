@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Materialize - Actividad Práctica</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body{
+            background:#f5f5f5;
+        }
+
+        .hero{
+            padding:70px 0;
+            background:linear-gradient(135deg,#2196F3,#26C6DA);
+            color:white;
+        }
+
+        .card{
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        footer{
+            margin-top:40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="blue">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Materialize</a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero center-align">
+        <div class="container">
+            <h3>Diseño Web Responsivo</h3>
+
+            <p>
+                Ejemplo desarrollado con Materialize CSS
+            </p>
+
+            <a class="btn-large red pulse modal-trigger" href="#modal1">
+                Ver Información
+            </a>
+        </div>
+    </section>
+
+    <!-- GRID -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col s12 m6 l4">
+
+                <div class="card hoverable">
+
+                    <div class="card-content">
+
+                        <span class="card-title">
+                            <i class="material-icons">devices</i>
+                            Responsive
+                        </span>
+
+                        <p>
+                            Materialize adapta automáticamente el diseño a celulares,
+                            tablets y computadoras.
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#">Más información</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col s12 m6 l4">
+
+                <div class="card hoverable">
+
+                    <div class="card-content">
+
+                        <span class="card-title">
+                            <i class="material-icons">widgets</i>
+                            Componentes
+                        </span>
+
+                        <p>
+                            Incluye botones, tarjetas, modales, formularios y muchos
+                            componentes listos para usar.
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#">Ver más</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col s12 m6 l4">
+
+                <div class="card hoverable">
+
+                    <div class="card-content">
+
+                        <span class="card-title">
+                            <i class="material-icons">animation</i>
+                            Animaciones
+                        </span>
+
+                        <p>
+                            Materialize incorpora efectos visuales que mejoran la
+                            experiencia del usuario.
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#">Explorar</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal1" class="modal">
+
+        <div class="modal-content">
+
+            <h4>Materialize CSS</h4>
+
+            <p>
+                Framework basado en Material Design que permite desarrollar
+                páginas modernas, responsivas y con componentes listos para usar.
+            </p>
+
+        </div>
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-close btn blue">
+                Cerrar
+            </a>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="page-footer blue">
+
+        <div class="container center">
+            © 2026 - Actividad Práctica Materialize
+        </div>
+
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            M.AutoInit();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
